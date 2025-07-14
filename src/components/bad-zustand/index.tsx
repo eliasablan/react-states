@@ -19,6 +19,12 @@ export default function Card() {
   return (
     <div className="flex flex-col items-center justify-center gap-4 border bg-white p-4">
       <h2 className="text-2xl font-bold">Bad Zustand (Wrongfully used)</h2>
+      <p className="max-w-sm text-center text-sm text-gray-500">
+        In this example, we are using Zustand incorrectly. We are using
+        destructuring like `const {"{ increment }"} = useStore()` which
+        subscribes components to the entire state, causing unnecessary
+        re-renders of button components every time the count changes.
+      </p>
       <Counter />
       <div className="flex gap-4 *:rounded-md *:border-2 *:border-blue-900 *:bg-blue-500 *:px-3 *:py-1 *:text-white">
         <IncrementButton />
