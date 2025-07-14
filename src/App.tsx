@@ -7,7 +7,8 @@ import BadZustandCard from "./components/bad-zustand";
 import ReactContext2Card from "./components/react-context-2";
 
 scan({
-  enabled: process.env.NODE_ENV !== "production",
+  enabled: true,
+  // enabled: process.env.NODE_ENV !== "production",
 });
 
 function App() {
