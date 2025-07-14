@@ -3,6 +3,7 @@ import ReactContextCard from "./components/react-context";
 import ReducerCard from "./components/reducer";
 import ReduxCard from "./components/redux";
 import ZustandCard from "./components/zustand";
+import BadZustandCard from "./components/bad-zustand";
 
 scan({
   enabled: process.env.NODE_ENV !== "production",
@@ -14,6 +15,7 @@ function App() {
       <ReactContextCard />
       <ReducerCard />
       <ReduxCard />
+      <BadZustandCard />
       <ZustandCard />
     </div>
   );

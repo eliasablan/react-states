@@ -18,7 +18,7 @@ const useStore = create<Store>()((set) => ({
 export default function Card() {
   return (
     <div className="flex flex-col items-center justify-center gap-4 border bg-white p-4">
-      <h2 className="text-2xl font-bold">Zustand</h2>
+      <h2 className="text-2xl font-bold">Bad Zustand (Wrongfully used)</h2>
       <Counter />
       <div className="flex gap-4 *:rounded-md *:border-2 *:border-blue-900 *:bg-blue-500 *:px-3 *:py-1 *:text-white">
         <IncrementButton />
@@ -35,16 +35,16 @@ function Counter() {
 }
 
 function IncrementButton() {
-  const increment = useStore((state) => state.increment);
+  const { increment } = useStore();
   return <Button onClick={increment}>Increment</Button>;
 }
 
 function DecrementButton() {
-  const decrement = useStore((state) => state.decrement);
+  const { decrement } = useStore();
   return <Button onClick={decrement}>Decrement</Button>;
 }
 
 function ResetButton() {
-  const reset = useStore((state) => state.reset);
+  const { reset } = useStore();
   return <Button onClick={reset}>Reset</Button>;
 }
