@@ -1,15 +1,9 @@
-import { scan } from "react-scan";
 import ReactContextCard from "./components/react-context";
 import ReducerCard from "./components/reducer";
 import ReduxCard from "./components/redux";
 import ZustandCard from "./components/zustand";
 import BadZustandCard from "./components/bad-zustand";
 import ReactContext2Card from "./components/react-context-2";
-
-scan({
-  enabled: true,
-  // enabled: process.env.NODE_ENV !== "production",
-});
 
 function App() {
   return (
