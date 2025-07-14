@@ -1,9 +1,15 @@
+import { scan } from "react-scan";
 import ReactContextCard from "./components/react-context";
 import ReducerCard from "./components/reducer";
 import ReduxCard from "./components/redux";
 import ZustandCard from "./components/zustand";
 import BadZustandCard from "./components/bad-zustand";
 import ReactContext2Card from "./components/react-context-2";
+
+scan({
+  dangerouslyForceRunInProduction: true,
+  enabled: true,
+});
 
 function App() {
   return (
